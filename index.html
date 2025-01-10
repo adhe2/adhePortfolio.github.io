@@ -139,22 +139,33 @@
       </div>
       <div class="row pt-2">
         <div class="col-sm-8 col-md-8 text-light mx-auto px-4">
-          <h3>Name</h3>
-          <div class="form-floating mb-3 d-flex">
-            <input type="texr" class="form-control" id="floatingInput" placeholder="Username" />
-            <label for="floatingInput">Username</label>
+          <!-- Alerts -->
+          <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+            <strong>Terima Kasih!</strong> Pesan anda sudah kami terima.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
-          <h3>Email</h3>
-          <div class="form-floating">
-            <input type="email" class="form-control" id="floatingEmail" placeholder="email" />
-            <label for="floatingEmail">Email</label>
-          </div>
-          <h3>Comments</h3>
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Comments</label>
-          </div>
-          <button type="button" class="btn btn-danger col-12 btn-lg mt-3 p-3">Send</button>
+          <form name="adhe-contact-form">
+            <h3>Name</h3>
+            <div class="form-floating mb-3 d-flex">
+              <input type="texr" class="form-control" id="floatingInput" placeholder="Username" name="nama" />
+              <label for="floatingInput">Username</label>
+            </div>
+            <h3>Email</h3>
+            <div class="form-floating">
+              <input type="email" class="form-control" id="floatingEmail" placeholder="email" name="email" />
+              <label for="floatingEmail">Email</label>
+            </div>
+            <h3>Comments</h3>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="pesan" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Comments</label>
+            </div>
+            <button type="submit" class="btn btn-danger col-12 btn-lg mt-3 p-3 btn-kirim">Send</button>
+            <button class="btn btn-danger col-12 p-3 btn-loading d-none mt-3" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+              <span role="status">Loading...</span>
+            </button>
+          </form>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -177,6 +188,38 @@
     </footer>
     <!-- AKhit Footer -->
 
+    <!-- Script Bootstrap -->
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Akhir Script Bootstrap -->
+    <!-- Script FORM -->
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbw97Tjew-0uGf22iW806yCN-WBUOAaBPJG4OjLcs4t7IAg64LCOoogJEEFykCyR5nkIYg/exec";
+      const form = document.forms["adhe-contact-form"];
+
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // ketika tombol submit di klik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // Tampilkan Alert
+            myAlert.classList.toggle("d-none");
+            // Reset formnya
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <!-- Akhir Script FORM -->
   </body>
 </html>
