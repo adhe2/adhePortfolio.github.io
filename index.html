@@ -7,6 +7,9 @@
     <!-- CSS Bootstrap -->
     <link href="Bootstrap/css/bootstrap.css" rel="stylesheet" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -33,13 +36,13 @@
     <!-- Home -->
     <div class="container-fluid bg-custom2 pt-5 home" id="home">
       <div class="row align-items-center">
-        <div class="col-md-6 ps-5 mb-5 pb-5 mt-5">
-          <h1 class="fw-bold">Hi, I'm <span class="bg-custom-font">Adherangga</span></h1>
+        <div class="col-md-6 ps-5 mb-5 pb-5 mt-5 intro">
+          <h1 class="fw-bold nama-saya"></span></h1>
           <h1 class="fw-bold">I'am a <span class="bg-custom-font">Front-End Developer</span></h1>
           <p class="fs-2 fw-semibold">I can <span class="bg-custom-font">Design</span> and <span class="bg-custom-font">Build your Website!</span></p>
           <button type="button" class="btn btn-danger f-5 rounded-4">Contact Me</button>
         </div>
-        <div class="col-md-6 align-self-center mb-5 pb-5 ps-5">
+        <div class="col-md-6 align-self-center mb-5 pb-5 px-4">
           <img src="img/My-Photo.jpg" class="custom-img ms-5 rounded-4 shadow-lg custom-img" alt="Adherangga" />
         </div>
       </div>
@@ -56,20 +59,20 @@
 
     <!-- About -->
     <div class="container-fluid bg-custom" id="about">
-      <div class="row pt-5">
+      <div class="row pt-5" data-aos="fade-down" data-aos-duration="1000">
         <div class="col text-center text-light">
           <h1>About Me</h1>
         </div>
       </div>
       <div class="row pt-4 px-4">
-        <div class="col-10 col-md-4 mx-auto px-2 mb-4 gap-2 d-grid flex-wrap">
+        <div class="col-10 col-md-4 mx-auto px-2 mb-4 gap-2 d-grid flex-wrap" data-aos="fade-right" data-aos-duration="1500">
           <h2 class="text-light text-center">Skills</h2>
           <button class="btn btn-danger" type="button">HTML</button>
           <button class="btn btn-danger" type="button">CSS</button>
           <button class="btn btn-danger" type="button">Javascript</button>
           <button class="btn btn-danger" type="button">UI Design</button>
         </div>
-        <div class="col-sm-12 col-md-8 pt-5 text-light fs-4 text-center">
+        <div class="col-sm-12 col-md-8 pt-5 text-light fs-4 text-center" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
           <p>Saya berfokus pada pembuatan antarmuka yang user-friendly dan responsive menggunakan HTML, CSS, dan JavaScript.</p>
           <p>Selain itu, saya ahli dalam UI design, menciptakan antarmuka yang estetis dan intuitif untuk pengalaman pengguna yang optimal.</p>
         </div>
@@ -91,7 +94,7 @@
       </div>
       <div class="row pt-5 gap-5 d-flex justify-content-center flex-wrap">
         <div class="col-auto text-center mt-3">
-          <div class="card custom-card" style="width: 18rem">
+          <div class="card custom-card" style="width: 18rem" data-aos="flip-left" data-aos-duration="500">
             <img src="img/Screenshot 2025-01-08 193126.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <p class="card-text">Project 1</p>
@@ -99,7 +102,7 @@
           </div>
         </div>
         <div class="col-auto text-center">
-          <div class="card custom-card mt-3" style="width: 18rem">
+          <div class="card custom-card mt-3" style="width: 18rem" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
             <img src="img/Screenshot 2025-01-08 193126.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <p class="card-text">Project 2</p>
@@ -107,7 +110,7 @@
           </div>
         </div>
         <div class="col-auto text-center">
-          <div class="card custom-card mt-3" style="width: 18rem">
+          <div class="card custom-card mt-3" style="width: 18rem" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
             <img src="img/Screenshot 2025-01-08 193126.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <p class="card-text">Project 3</p>
@@ -120,6 +123,72 @@
           <button type="button" class="btn btn-danger f-5 rounded-4">More Project</button>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2c3e50" fill-opacity="1" d="M0,64L24,101.3C48,139,96,213,144,234.7C192,256,240,224,288,192C336,160,384,128,432,106.7C480,85,528,75,576,74.7C624,75,672,85,720,101.3C768,117,816,139,864,170.7C912,203,960,245,1008,245.3C1056,245,1104,203,1152,170.7C1200,139,1248,117,1296,106.7C1344,96,1392,96,1416,96L1440,96L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+    </div>
+    <!-- Akhir My Project -->
+
+    <!-- Gallery -->
+    <section id="gallery" class="bg-custom">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2 class="bg-custom-font2">Gallery</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/1.jpg" alt="Gambar 1" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/2.jpg" alt="Gambar 2" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/3.jpg" alt="Gambar 3" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/4.jpg" alt="Gambar 4" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/5.jpg" alt="Gambar 5" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/6.jpg" alt="Gambar 6" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/7.jpg" alt="Gambar 7" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/8.jpg" alt="Gambar 8" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/9.jpg" alt="Gambar 9" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/10.jpg" alt="Gambar 10" class="img-fluid gallery-img" />
+            </a>
+          </div>
+        </div>
+        
+      </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#2C3E50"
@@ -127,8 +196,8 @@
           d="M0,64L48,101.3C96,139,192,213,288,245.3C384,277,480,267,576,240C672,213,768,171,864,165.3C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
       </svg>
-    </div>
-    <!-- Akhir My Project -->
+    </section>
+    <!-- Akhir Gallery -->
 
     <!-- Contact Me -->
     <div class="container-fluid bg-custom" id="contact">
@@ -191,6 +260,51 @@
     <!-- Script Bootstrap -->
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Akhir Script Bootstrap -->
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+      AOS.init({
+        once: true, // whether animation should happen only once - while scrolling down
+        duration: 2000,
+      });
+    </script>
+    <!-- Akhir Script AOS -->
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.nama-saya', {
+        duration: 2,
+        delay: 1.5,
+        text: "Hi, I'm Adherangga."
+      })
+      gsap.from(".home img", {
+        duration: 1,
+        rotateY: 360,
+        opacity: 0,
+      });
+      gsap.from(".navbar", {
+        duration: 1.5,
+        opacity: 0,
+        ease: "bounce",
+        y: -250,
+      });
+      gsap.from(".intro", {
+        duration: 1,
+        opacity: 0,
+        ease: "back",
+        x: -100,
+      });
+    </script>
+
+    <!-- Akhir GSAP -->
     <!-- Script FORM -->
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbw97Tjew-0uGf22iW806yCN-WBUOAaBPJG4OjLcs4t7IAg64LCOoogJEEFykCyR5nkIYg/exec";
@@ -219,6 +333,8 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+
+      // Script dark mode
     </script>
     <!-- Akhir Script FORM -->
   </body>

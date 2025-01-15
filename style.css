@@ -14,6 +14,9 @@ body {
 .bg-custom-font {
   color: #34495e;
 }
+.bg-custom-font2 {
+  color: #ecf0f1;
+}
 /* .home {
     height: 1500px;
   } */
@@ -49,4 +52,11 @@ svg {
 
 .custom-img:hover {
   transform: scale(1.1);
+}
+
+.gallery-img {
+  width: 100%;
+}
+#gallery .row > * {
+  padding: 0;
 }
